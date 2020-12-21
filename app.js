@@ -28,7 +28,7 @@ app.get('/detail', function (req, res) {
             {
                 id: '1234',
                 title: req.query.title,
-                description: 'Tienda e-commerce',
+                description: 'Dispositivo móvil de Tienda e-commerce',
                 picture_url:
                     'https://ivangsm-mp-ecommerce-nodejs.herokuapp.com/' +
                     req.query.img.substring(1),
