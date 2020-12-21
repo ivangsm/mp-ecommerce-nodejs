@@ -6,7 +6,7 @@ var port = process.env.PORT || 3000;
 var app = express();
 
 app.use(function(req, res, next) {
-    res.setHeader("Content-Security-Policy", "frame-ancestors  https://mercadopago.com.mx");
+    res.setHeader("Content-Security-Policy", "frame-ancestors 'self'  https://mercadopago.com.mx");
     return next();
 });
 
