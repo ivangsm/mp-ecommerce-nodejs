@@ -5,6 +5,13 @@ var port = process.env.PORT || 3000;
 
 var app = express();
 
+app.use(function(req, res, next) {
+    res.setHeader("Content-Security-Policy", "frame-ancestors  *.mercadolibre.com");
+    return next();
+});
+
+app.use(express.static(__dirname + '/'));
+
 mercadopago.configure({
     access_token:
         'APP_USR-1159009372558727-072921-8d0b9980c7494985a5abd19fbe921a3d-617633181',
@@ -45,4 +52,6 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.listen(port);
+app.listen(port, () => {
+    console.log('listening on http://localhost:3000');
+});
