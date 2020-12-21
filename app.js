@@ -43,7 +43,7 @@ app.get('/detail', function (req, res) {
         payer: {
             name: 'Lalo',
             surname: 'Landa',
-            email: 'test_user_58295862@testuser.com',
+            email: 'test_user_81131286@testuser.com',
             phone: {
                 area_code: '52',
                 number: Number(5549737300),
